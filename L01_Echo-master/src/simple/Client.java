@@ -22,7 +22,8 @@ public class Client {
             System.out.println("Waiting for connection.....");
             InetAddress localAddress = InetAddress.getLocalHost();
             try (Socket clientSocket = new Socket(localAddress, 12345);
-                    PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+                    PrintWriter out = new PrintWriter(
+                            clientSocket.getOutputStream(), true);
                     BufferedReader br = new BufferedReader(
                             new InputStreamReader(clientSocket.getInputStream()))) {
 
